@@ -64,7 +64,7 @@ class MultiRunExperiment(Experiment):
             for i in range(1, self.repetitions+1):
                 name = "%s_%03d" % (prefix, i)
                 
-                print(Trajectory.exists(results,name)
+                print(Trajectory.exists(results,name))
                 if Trajectory.exists(results, name):
                     
                     files.extend(Trajectory.gather(results, name))
