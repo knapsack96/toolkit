@@ -65,10 +65,13 @@ class MultiRunExperiment(Experiment):
                 name = "%s_%03d" % (prefix, i)
                 print(name, results, tracker, sequence)
                 if Trajectory.exists(results, name):
+                    print('primoooooooooooooooooooooooooo')
                     files.extend(Trajectory.gather(results, name))
                 elif self._can_stop(tracker, sequence):
+                    print('secondoooooooooooooooooooooooooo')
                     break
                 else:
+                    print('terzoooooooooooooooooooooooooo')
                     complete = False
                     break
 
