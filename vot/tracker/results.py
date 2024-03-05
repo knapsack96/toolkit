@@ -19,7 +19,7 @@ class Results(object):
             storage (Storage): Storage interface
         """
         self._storage = storage
-
+        print('La cartella dei risultati è', self._storage)
     def exists(self, name):
         """Returns true if the given file exists in the results storage.
 
