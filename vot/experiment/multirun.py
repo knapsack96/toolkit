@@ -63,6 +63,7 @@ class MultiRunExperiment(Experiment):
             prefix = sequence.name if not multiobject else "%s_%s" % (sequence.name, o)
             for i in range(1, self.repetitions+1):
                 name = "%s_%03d" % (prefix, i)
+                print(name, results, tracker, sequence)
                 if Trajectory.exists(results, name):
                     files.extend(Trajectory.gather(results, name))
                 elif self._can_stop(tracker, sequence):
